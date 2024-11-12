@@ -4,16 +4,150 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
+
+  <!--
+
+    Step: 1
+
+    Will <meta name="description" content="A brief summary of your CVPR paper, highlighting key points and findings."> 
+    be shown in my website?
+
+    Answer:
+    No, the <meta name="description" content="..."> tag will not be shown directly on your website. Instead, it serves as a summary 
+    for search engines and social media previews. When someone searches for your site or shares your link, this description may appear 
+    below the link in search results or as part of the preview on social media platforms.
+
+    To add text that will be visible on the webpage itself, you would place that content in a section of the index.html file (such as a 
+    <p>, <h1>, or <div> tag) instead of a <meta> tag.
+
+  -->
   <meta name="description" content="DESCRIPTION META TAG">
+
+
+
+  <!--
+    Step: 2
+
+    I did not understand about 
+
+    Social Media Title and Description Tags
+    Can you describe with an example, how it works?
+
+    Answer:
+    The **social media title and description tags** (`og:title` and `og:description`) are **Open Graph meta tags**. These tags help control 
+    what appears when someone shares your website link on social media platforms, such as Facebook, LinkedIn, or Twitter.
+
+    Here's how they work:
+
+    ### Example
+
+    Suppose you add these tags to your `index.html`:
+
+    ```html
+    <meta property="og:title" content="My CVPR Paper on Facial Generation"/>
+    <meta property="og:description" content="This research explores advanced facial generation techniques using neural rendering and 
+    computer vision. Discover how we achieve realistic facial transformations."/>
+    <meta property="og:image" content="https://yourusername.github.io/your-repository-name/static/images/banner_image.png" />
+    <meta property="og:url" content="https://yourusername.github.io/your-repository-name/" />
+    ```
+
+    ### When Someone Shares Your Link
+
+    Let’s say you share your website URL (`https://yourusername.github.io/your-repository-name/`) on Facebook or LinkedIn. Social media 
+    platforms will use these Open Graph tags to display a preview of your site. Here’s what people might see in the preview:
+
+    - **Title**: "My CVPR Paper on Facial Generation"
+    - **Description**: "This research explores advanced facial generation techniques using neural rendering and computer vision. Discover 
+    how we achieve realistic facial transformations."
+    - **Image**: The image located at `static/images/banner_image.png`
+    - **Link**: The URL of your site
+
+    The preview would look something like this on social media:
+
+      > **My CVPR Paper on Facial Generation**  
+      > This research explores advanced facial generation techniques using neural rendering and computer vision. Discover how we achieve 
+      realistic facial transformations.  
+      > ![Banner Image](https://yourusername.github.io/your-repository-name/static/images/banner_image.png)  
+      > [yourusername.github.io/your-repository-name](https://yourusername.github.io/your-repository-name/)
+
+    ### Why This Is Useful
+
+    By setting the `og:title`, `og:description`, `og:image`, and `og:url` tags, you control exactly how your page appears in social media 
+    previews. This makes it more appealing and informative when shared, which can attract more clicks and interest.
+
+    Let me know if that clarifies it!
+
+  -->
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+
+
+  <!-- 
+    Step: 3
+
+    We will know later about this part. When we make our website public then the link will be generated for the webpage by Github   
+    pages. Then, we will put the link here like <meta property="og:url" content="https://yourusername.github.io/your-repository-name/"/>
+  -->
   <meta property="og:url" content="URL OF THE WEBSITE"/>
+
+  <!--   
+    Step: 4
+    Update og:image with the path to an image that represents your paper (a figure from your paper, a banner, or a cover image). Place 
+    this image in the static/images folder and update the file name accordingly.
+  
+    I am confused about the banner image 
+    I gave a link <meta property="og:image" content="static/images/banner_image.png" />
+
+    also added the image in the respective directory. But when I refresh my website I cannot see any changes.
+
+
+    Answer:
+    The `og:image` tag specifies an image for **social media previews only**, not for displaying directly on your website. When you 
+    refresh your website, you won’t see this image unless you’ve also added it in the visible HTML part of the page.
+
+    ### How to Check the Banner Image
+
+    1. **Testing the Preview**:
+      - To check if social media platforms can see your `og:image`, you can use tools like:
+        - **Facebook Sharing Debugger**: [https://developers.facebook.com/tools/debug/](https://developers.facebook.com/tools/debug/)
+        - **Twitter Card Validator**: [https://cards-dev.twitter.com/validator](https://cards-dev.twitter.com/validator)
+      - Paste your website link in one of these tools, and it will show you how your link preview (including the banner image) will look on 
+      social media.
+
+    2. **Displaying the Image on Your Website (Optional)**:
+      - If you want the banner image to show up on your website as well, you need to add it in the body section of `index.html`. For example, 
+      near the top of your content, you can add:
+
+        ```html
+        <img src="static/images/banner_image.png" alt="Banner Image" style="width:100%;">
+        ```
+
+      - This line will display the banner image at the top of your website.
+
+    ### Summary
+
+    - **`og:image`** is for social media previews and won’t show up on your site directly.
+    - To see the banner image directly on your webpage, add an `<img>` tag in the HTML body.
+  -->
+
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
+
+  <!-- 
+    Step: 5
+    
+    These tags are for Twitter specifically. Replace with your paper’s title and a short description.
+
+    Similar to the general banner image, set a path to an image for Twitter.
+
+    Replace content="KEYWORDS SHOULD BE PLACED HERE" with relevant keywords.
+
+    <meta name="keywords" content="CVPR, computer vision, neural rendering, facial generation, AI">
+  -->
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
@@ -24,8 +158,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+
+  <!--
+    Step: 6
+
+    From now on actually the main work begins:
+
+    1. This sets the text displayed on the browser tab. Replace it with your paper's title.
+
+    2. Then also select the Icon that will be shown beside the InstaFace text.
+  -->
+  <title>InstaFace</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,22 +196,32 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
+
+  <!--
+    Step: 7
+
+    Here we will add our
+
+    Title of the paper and the authors.
+  -->
+            <h1 class="title is-2 publication-title">InstaFace: Identity-Preserving Facial Editing with Single Image Inference </h1>
+            <div class="is-size-4 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
+              <!-- <span class="author-block">
                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
                 <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                  </span> -->
+                  Anonymous CVPR submission
                   </div>
 
-                  <div class="is-size-5 publication-authors">
+                  <!-- Author Designations -->
+                  <!-- <div class="is-size-5 publication-authors">
                     <span class="author-block">Institution Name<br>Conferance name and year</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+                  </div> -->
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
@@ -82,8 +236,19 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
+                    <!-- Github link -->
                     <span class="link-block">
+                      <a href="https://github.com/arnobanu/InstaFace-official.git" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,21 +256,10 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+                  </span> -->
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -113,7 +267,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
             </div>
           </div>
         </div>
@@ -122,7 +276,7 @@
   </div>
 </section>
 
-
+<script> /***
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -139,24 +293,72 @@
   </div>
 </section>
 <!-- End teaser video -->
+***/ </script>
+
+<!-- Teaser image -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/teaser1.png" alt="Teaser Image" style="width:100%; height:auto;">
+      <h2 class="subtitle has-text-centered">
+        <!-- Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.  -->
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
 
 <!-- Paper abstract -->
-<section class="section hero is-light">
+<!-- <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Facial appearance editing is crucial for digital avatars, AR/VR, and personalized content creation, driving realistic user experiences. However, preserving identity with generative models is challenging, especially in scenarios with minimal data availability. Traditional methods often require multiple images and still struggle with issues like unnatural face shifts, inconsistent hair alignment, or excessive smoothing effects. To overcome these challenges, we introduce a novel diffusion-based framework, InstaFace, to generate realistic images while preserving identity using only a single image. Central to Instaface, we introduce an efficient guidance network that harnesses 3D perspectives by integrating multiple 3DMM-based conditionals (e.g., albedo, normals) without introducing additional trainable parameters. To ensure maximum identity retention, as well as preservation of background, hair and accessories, we introduce an additional branch that utilizes feature embeddings from a facial recognition model and a pre-trained multimodal vision-language model. Quantitative evaluations demonstrate that our method outperforms several state-of-the-art approaches in terms of identity preservation, photorealism, and effective control of pose, expression, and lighting, achieving superior performance across a range of metrics.
           </p>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End paper abstract -->
 
+<!-- Work from this part -->
+
+<script> /***
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Paper Overview -->
+<!-- <section class="section hero is-light"> -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <!-- <div class="columns is-centered has-text-centered"> -->
+      <!-- <div class="column is-four-fifths"> -->
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our method integrates control conditions from  3D Morphable Model (3DMM) to edit the target face, accordingly. InstaFace is composed of two stages. In the first stage (Figure~\ref{fig:Architecture}a), the Guidance network, learns to understand and generalize facial attributes from a broad dataset. This ensures that the generative process can effectively handle various appearance conditions, such as pose, expression, and lighting. In the second stage (Figure~\ref{fig:Architecture}b), InstaFace fine-tunes its generative capabilities using only one specific target image. During this stage, the embeddings obtained from a pre-trained CLIP model and a facial recognition model provide the necessary information to guide the diffusion process. This guidance is crucial for accurately retaining the specific identity of the individual, ensuring that facial features and background attributes, such as hair and accessories, are preserved. Finally, as shown in Figure~\ref{fig:Architecture}c, the Diffusion Network learns both the overall identity information and the necessary conditioning to generate the desired facial image. This combination allows InstaFace to deliver high-fidelity, identity-preserving facial edits with precise attribute modifications.
+          </p>
+        </div>
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</section>
+<!-- End paper Overview -->
 
 <!-- Image carousel -->
 <section class="hero is-small">
@@ -273,7 +475,7 @@
   </section>
 <!--End paper poster -->
 
-
+***/ </script>
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">

@@ -135,3 +135,8 @@ body {
 
 
 
+h1 {
+  text-align: center; /* Center the title */
+  line-height: 1.2;   /* Adjusts the space between lines */
+  margin: 0;          /* Removes extra margin */
+}
