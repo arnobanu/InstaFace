@@ -21,7 +21,7 @@
     <p>, <h1>, or <div> tag) instead of a <meta> tag.
 
   -->
-  <meta name="description" content="DESCRIPTION META TAG">
+  <meta name="description" content="InstaFace: Identity-Preserving Facial Editing with Single Image Inference. A diffusion-based framework for identity-preserving facial image generation from a single reference image. FG 2026.">
 
 
 
@@ -78,8 +78,8 @@
     Let me know if that clarifies it!
 
   -->
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:title" content="InstaFace: Identity-Preserving Facial Editing with Single Image Inference"/>
+  <meta property="og:description" content="A diffusion-based framework for identity-preserving facial editing from a single reference image, with fine-grained 3DMM-based control over expression, pose, and lighting. FG 2026."/>
 
 
   <!-- 
@@ -88,11 +88,12 @@
     We will know later about this part. When we make our website public then the link will be generated for the webpage by Github   
     pages. Then, we will put the link here like <meta property="og:url" content="https://yourusername.github.io/your-repository-name/"/>
   -->
+  <!-- TODO: replace with your GitHub Pages URL once deployed, e.g. https://arnobanu.github.io/InstaFace/ -->
   <meta property="og:url" content="URL OF THE WEBSITE"/>
 
-  <!--   
+  <!--
     Step: 4
-    Update og:image with the path to an image that represents your paper (a figure from your paper, a banner, or a cover image). Place 
+    Update og:image with the path to an image that represents your paper (a figure from your paper, a banner, or a cover image). Place
     this image in the static/images folder and update the file name accordingly.
   
     I am confused about the banner image 
@@ -131,7 +132,7 @@
   -->
 
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/images/teaser1.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -148,13 +149,13 @@
 
     <meta name="keywords" content="CVPR, computer vision, neural rendering, facial generation, AI">
   -->
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:title" content="InstaFace: Identity-Preserving Facial Editing with Single Image Inference">
+  <meta name="twitter:description" content="A diffusion-based framework for identity-preserving facial editing from a single reference image. FG 2026.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:image" content="static/images/teaser1.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="InstaFace, facial editing, identity preservation, diffusion models, 3DMM, single-image, face generation, FG 2026">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -204,29 +205,29 @@
 
     Title of the paper and the authors.
   -->
-            <h1 class="title is-2 publication-title">InstaFace: Identity-Preserving Facial Editing with Single Image Inference </h1>
+            <h1 class="title is-2 publication-title">InstaFace: Identity-Preserving Facial Editing with Single Image Inference</h1>
             <div class="is-size-4 publication-authors">
-              <!-- Paper authors -->
-              <!-- <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span> -->
-                  Anonymous CVPR submission
-                  </div>
+              <span class="author-block">MD Wahiduzzaman Khan<sup>1</sup>,</span>
+              <span class="author-block">Mingshan Jia<sup>1</sup>,</span>
+              <span class="author-block">Xiaolin Zhang<sup>2,&dagger;</sup>,</span>
+              <span class="author-block">En Yu<sup>1</sup>,</span>
+              <span class="author-block">Caifeng Shan<sup>2</sup>,</span>
+              <span class="author-block">Kaska Musial-Gabrys<sup>1</sup></span>
+            </div>
 
-                  <!-- Author Designations -->
-                  <!-- <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div> -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Technology Sydney, Australia</span><br>
+              <span class="author-block"><sup>2</sup>Shandong University of Science and Technology, China</span>
+              <br>
+              <span class="author-block"><b>FG 2026</b></span>
+              <br>
+              <small><sup>&dagger;</sup>Corresponding author</small>
+            </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -234,10 +235,10 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- Github link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="https://github.com/arnobanu/InstaFace-official.git" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -245,7 +246,7 @@
                       </span>
                       <span>Code</span>
                     </a>
-                  </span>
+                  </span> -->
 
                     <!-- Supplementary PDF link -->
                     <!-- <span class="link-block">
@@ -295,35 +296,36 @@
 <!-- End teaser video -->
 ***/ </script>
 
-<!-- Teaser image -->
+<!-- Teaser video -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/teaser1.png" alt="Teaser Image" style="width:100%; height:auto;">
+      <video autoplay controls muted loop playsinline style="width:100%; height:auto;">
+        <source src="static/videos/teaser.mp4" type="video/mp4">
+      </video>
       <h2 class="subtitle has-text-centered">
-        <!-- Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.  -->
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser image -->
+<!-- End teaser video -->
 
 
 <!-- Paper abstract -->
-<!-- <section class="section hero is-light">
+<section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Facial appearance editing is crucial for digital avatars, AR/VR, and personalized content creation, driving realistic user experiences. However, preserving identity with generative models is challenging, especially in scenarios with minimal data availability. Traditional methods often require multiple images and still struggle with issues like unnatural face shifts, inconsistent hair alignment, or excessive smoothing effects. To overcome these challenges, we introduce a novel diffusion-based framework, InstaFace, to generate realistic images while preserving identity using only a single image. Central to Instaface, we introduce an efficient guidance network that harnesses 3D perspectives by integrating multiple 3DMM-based conditionals (e.g., albedo, normals) without introducing additional trainable parameters. To ensure maximum identity retention, as well as preservation of background, hair and accessories, we introduce an additional branch that utilizes feature embeddings from a facial recognition model and a pre-trained multimodal vision-language model. Quantitative evaluations demonstrate that our method outperforms several state-of-the-art approaches in terms of identity preservation, photorealism, and effective control of pose, expression, and lighting, achieving superior performance across a range of metrics.
+            Facial appearance editing plays a pivotal role in digital avatars, AR/VR systems, and personalized content creation. However, achieving identity-preserving editing from a single reference image remains a significant challenge. Existing approaches typically rely on multiple images per identity, yet still struggle with rigging accuracy and consistency in appearance. To address this limitation, we propose InstaFace, a diffusion-based framework for identity-preserving facial image generation from a single input. To enable precise control, InstaFace introduces a 3D Fusion Controller Network that integrates multiple 3DMM-derived conditionals, augmented with lightweight adjustment modules for fine-grained rigging control. These modules are optimized using a novel geometry-aware objective, 3D Morphable Reinference Discrepancy (3D-MRD), which aligns morphable reconstructions with the original conditioning. Additionally, to retain high-fidelity contextual features such as background, hair, and accessories, we incorporate a Contextual Identity Mixer, a hybrid embedding module that leverages both facial recognition and vision-language priors. Empirical evaluations demonstrate that InstaFace achieves strong identity preservation and photorealism while offering fine control over expression, pose, and lighting, using only <em>a single reference image</em>.
           </p>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 <!-- End paper abstract -->
 
 <!-- Work from this part -->
@@ -480,7 +482,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@inproceedings{khan2026instaface,
+  title     = {InstaFace: Identity-Preserving Facial Editing with Single Image Inference},
+  author    = {Khan, MD Wahiduzzaman and Jia, Mingshan and Zhang, Xiaolin and Yu, En and Shan, Caifeng and Musial-Gabrys, Kaska},
+  booktitle = {Proceedings of the IEEE International Conference on Automatic Face and Gesture Recognition (FG)},
+  year      = {2026}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
