@@ -8,8 +8,6 @@ Project page for our FG 2026 paper.
 
 **Affiliations:** University of Technology Sydney · Shandong University of Science and Technology
 
-Code will be released soon.
-
 ---
 
 <sub>Page built with the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template).</sub>
